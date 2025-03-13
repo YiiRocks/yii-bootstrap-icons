@@ -20,14 +20,12 @@ final class BootstrapIconsAsset extends AssetBundle
         'bootstrap-icons.css',
     ];
 
-    public ?string $sourcePath = '@npm/bootstrap-icons/font';
+    public ?string $sourcePath = '@vendor/twbs/bootstrap-icons/font';
 
     public function __construct()
     {
-        $pathMatcher = new PathMatcher();
-
         $this->publishOptions = [
-            'filter' => $pathMatcher->only('bootstrap-icons.css', 'fonts/*'),
+            'filter' => (new PathMatcher())->only('**/bootstrap-icons.css', '**/fonts/**'),
         ];
     }
 }

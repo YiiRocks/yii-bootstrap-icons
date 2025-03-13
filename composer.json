@@ -25,18 +25,16 @@
         "source": "https://github.com/YiiRocks/yii-bootstrap-icons/tree/master"
     },
     "require": {
-        "php": ">=7.4.0",
-        "npm-asset/bootstrap-icons": "^1.2",
-        "yiisoft/assets": "^2.0",
-        "yiisoft/files": "^1.0"
+        "php": ">=8.1.0",
+        "twbs/bootstrap-icons": "^1.11",
+        "yiisoft/assets": "^5.1"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "phpunit/phpunit": "^9.0",
-        "vimeo/psalm": "^4.3",
-        "yiisoft/composer-config-plugin": "^1.0",
-        "yiisoft/di": "^3.0",
-        "yiisoft/factory": "^3.0"
+        "friendsofphp/php-cs-fixer": "^3.70",
+        "phpunit/phpunit": "^10.5",
+        "yiisoft/config": "^1.6",
+        "yiisoft/di": "*",
+        "yiisoft/files": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -69,9 +67,15 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
+        },
+        "config-plugin-options": {
+            "source-directory": "config"
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "yiisoft/config": true
+        }
     }
 }
