@@ -1,7 +1,7 @@
 {
     "name": "yiirocks/yii-bootstrap-icons",
     "description": "Yii3 Asset Bundle for the Bootstrap Icons",
-    "type": "yii3-extension",
+    "type": "library",
     "keywords": [
         "yii",
         "yii3",
@@ -25,13 +25,14 @@
         "source": "https://github.com/YiiRocks/yii-bootstrap-icons/tree/master"
     },
     "require": {
-        "php": ">=8.1.0",
-        "twbs/bootstrap-icons": "^1.11",
+        "php": ">=8.1",
+        "twbs/bootstrap-icons": "^1.13",
         "yiisoft/assets": "^5.1"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.70",
-        "phpunit/phpunit": "^10.5",
+        "friendsofphp/php-cs-fixer": "@stable",
+        "phpunit/phpunit": "@stable",
+        "vimeo/psalm": "@stable",
         "yiisoft/config": "^1.6",
         "yiisoft/di": "*",
         "yiisoft/files": "^2.0"
@@ -54,15 +55,13 @@
     ],
     "scripts": {
         "php-cs-fixer": "@php vendor/bin/php-cs-fixer fix",
-        "phpcs": "@php vendor/bin/phpcs",
-        "phpmd": "@php vendor/bin/phpmd src/ text tests/data/phpmd_ruleset.xml",
-        "phpunit": "@php vendor/bin/phpunit --colors=always"
+        "phpunit": "@php vendor/bin/phpunit",
+        "psalm": "@php vendor/bin/psalm"
     },
     "scripts-descriptions": {
         "php-cs-fixer": "Cleans to code with PHP Coding Standards Fixer.",
-        "phpcs": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-        "phpmd": "PHP Mess Detector.",
-        "phpunit": "PHPUnit - programmer-oriented testing framework."
+        "phpunit": "PHPUnit - programmer-oriented testing framework.",
+        "psalm": "Psalm - static analysis tool for finding errors in PHP applications."
     },
     "extra": {
         "branch-alias": {

@@ -5,10 +5,13 @@ declare(strict_types=1);
 namespace YiiRocks\Yii\Bootstrap\Icons\Assets;
 
 use Yiisoft\Assets\AssetBundle;
+use Yiisoft\Assets\AssetManager;
 use Yiisoft\Files\PathMatcher\PathMatcher;
 
 /**
  * Asset bundle for the Bootstrap Icons CSS
+ *
+ * @psalm-import-type CssFile from AssetManager
  */
 final class BootstrapIconsAsset extends AssetBundle
 {
@@ -16,6 +19,8 @@ final class BootstrapIconsAsset extends AssetBundle
 
     public ?string $baseUrl = '@assetsUrl';
 
+    /** @var array */
+    /** @psalm-var array<array-key, CssFile|string> */
     public array $css = [
         'bootstrap-icons.css',
     ];

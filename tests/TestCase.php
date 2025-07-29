@@ -19,7 +19,8 @@ use Yiisoft\Files\FileHelper;
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected Aliases $aliases;
-    protected AssetManager $assetManager;
+    protected AssetManager $manager;
+    protected AssetPublisherInterface $publisher;
     private ContainerInterface $container;
 
     protected function setUp(): void

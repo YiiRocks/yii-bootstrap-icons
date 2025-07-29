@@ -27,13 +27,13 @@ $assetManager->register(
 
 ## Unit testing
 
-The package is tested with [PHPUnit](https://phpunit.de/). To run tests:
+The package is tested with [Psalm](https://psalm.dev/) and [PHPUnit](https://phpunit.de/). To run tests:
 
 ```bash
-./vendor/bin/phpunit
+composer psalm
+composer phpunit
 ```
 
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/YiiRocks/yii-bootstrap-icons.svg)](https://codeclimate.com/github/YiiRocks/yii-bootstrap-icons/maintainability)
-[![Codacy branch grade](https://img.shields.io/codacy/grade/1a80083546d049dc83a682b93901e4bc/master.svg)](https://app.codacy.com/gh/YiiRocks/yii-bootstrap-icons)
-[![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/yiirocks/yii-bootstrap-icons/master.svg)](https://scrutinizer-ci.com/g/yiirocks/yii-bootstrap-icons/?branch=master)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/YiiRocks/yii-bootstrap-icons/analysis.yml?branch=master)
+[![Maintainability](https://qlty.sh/gh/YiiRocks/projects/yii-bootstrap-icons/maintainability.svg)](https://qlty.sh/gh/YiiRocks/projects/yii-bootstrap-icons)
+[![Codacy branch grade](https://img.shields.io/codacy/grade/41c0fc9e1e244d1292f7ba51b6ed1065/master.svg)](https://app.codacy.com/gh/YiiRocks/svg-inline-fontawesome)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/YiiRocks/yii-bootstrap-icons/phpunit.yml?branch=master)
