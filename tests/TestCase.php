@@ -23,6 +23,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     protected AssetPublisherInterface $publisher;
     private ContainerInterface $container;
 
+    #[\Override]
     protected function setUp(): void
     {
         parent::setUp();
@@ -46,6 +47,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         FileHelper::ensureDirectory($this->aliases->get('@assets'), 0775);
     }
 
+    #[\Override]
     protected function tearDown(): void
     {
         FileHelper::removeDirectory($this->aliases->get('@assets'));

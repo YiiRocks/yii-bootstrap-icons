@@ -20,7 +20,10 @@ final class BootstrapIconsAsset extends AssetBundle
     public ?string $baseUrl = '@assetsUrl';
 
     /** @var array */
-    /** @psalm-var array<array-key, CssFile|string> */
+    /**
+     * @psalm-var array<array-key, CssFile|string>
+     * @psalm-suppress NonInvariantDocblockPropertyType
+     */
     public array $css = [
         'bootstrap-icons.css',
     ];
