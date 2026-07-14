@@ -10,7 +10,7 @@
         "icons"
     ],
     "homepage": "https://www.yii.rocks/yii-bootstrap-icons/",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
@@ -86,5 +86,11 @@
             "infection/extension-installer": true,
             "yiisoft/config": true
         }
-    }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/YiiRocks"
+        }
+    ]
 }
