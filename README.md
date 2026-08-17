@@ -23,22 +23,6 @@ The package could be installed via composer:
 composer require yiirocks/yii-bootstrap-icons
 ```
 
-## Usage
+## Documentation
 
-```php
-use YiiRocks\Yii\Bootstrap\Icons\Assets\BootstrapIconsAsset;
-
-$assetManager->register(
-    BootstrapIconsAsset::class,
-);
-```
-
-## Unit testing
-
-The package is tested with [Psalm](https://psalm.dev/), [PHPUnit](https://phpunit.de/) and [Infection](https://infection.github.io/). To run tests:
-
-```bash
-composer psalm
-composer phpunit
-composer infection
-```
+The complete reference guide is available at [Yii.Rocks](https://www.yii.rocks/yii-bootstrap-icons/).
