@@ -15,6 +15,7 @@ use Yiisoft\Config\ConfigPaths;
 use Yiisoft\Di\Container;
 use Yiisoft\Di\ContainerConfig;
 use Yiisoft\Files\FileHelper;
+use Override;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
@@ -23,7 +24,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     protected AssetPublisherInterface $publisher;
     private ContainerInterface $container;
 
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();
@@ -33,8 +34,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $containerConfig = ContainerConfig::create()
             ->withDefinitions(
                 $config->get('di')
-                +
-                [LoggerInterface::class => NullLogger::class]
+                + [LoggerInterface::class => NullLogger::class],
             );
         $this->container = new Container($containerConfig);
         $this->aliases = $this->container->get(Aliases::class);
@@ -47,7 +47,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         FileHelper::ensureDirectory($this->aliases->get('@assets'), 0775);
     }
 
-    #[\Override]
+    #[Override]
     protected function tearDown(): void
     {
         FileHelper::removeDirectory($this->aliases->get('@assets'));

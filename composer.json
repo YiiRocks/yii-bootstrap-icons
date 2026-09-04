@@ -36,6 +36,7 @@
         "phpunit/phpunit": "@stable",
         "squizlabs/php_codesniffer": "@stable",
         "vimeo/psalm": "^6.0",
+        "yiisoft/code-style": "^1.1",
         "yiisoft/config": "^1.6",
         "yiisoft/di": "*",
         "yiisoft/files": "^2.0"
